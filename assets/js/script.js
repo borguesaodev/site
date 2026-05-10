@@ -1,17 +1,7 @@
-'use strict';
+/*element toggle function*/
+const elemToggleFunc = function (elem) {elem.classList.toggle("active");}
 
-/**
- * element toggle function
- */
-
-const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-/**
- * header sticky & go to top
- */
-
+/*header sticky & go to top*/
 const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
@@ -27,12 +17,7 @@ window.addEventListener("scroll", function () {
 
 });
 
-
-
-/**
- * navbar toggle
- */
-
+/*navbar toggle*/
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
 
@@ -44,11 +29,7 @@ navToggleBtn.addEventListener("click", function () {
 
 });
 
-
-
-/**
- * skills toggle
- */
+/*skills toggle*/
 
 const toggleBtnBox = document.querySelector("[data-toggle-box]");
 const toggleBtns = document.querySelectorAll("[data-toggle-btn]");
@@ -58,18 +39,13 @@ for (let i = 0; i < toggleBtns.length; i++) {
   toggleBtns[i].addEventListener("click", function () {
 
     elemToggleFunc(toggleBtnBox);
-    for (let i = 0; i < toggleBtns.length; i++) { elemToggleFunc(toggleBtns[i]); }
+    for (let i = 0; i < toggleBtns.length; i++) {elemToggleFunc(toggleBtns[i]);}
     elemToggleFunc(skillsBox);
 
   });
 }
 
-
-
-/**
- * dark & light theme toggle
- */
-
+/*dark & light theme toggle*/
 const themeToggleBtn = document.querySelector("[data-theme-btn]");
 
 themeToggleBtn.addEventListener("click", function () {
@@ -90,10 +66,7 @@ themeToggleBtn.addEventListener("click", function () {
 
 });
 
-/**
- * check & apply last time selected theme from localStorage
- */
-
+/*check & apply last time selected theme from localStorage*/
 if (localStorage.getItem("theme") === "light_theme") {
   themeToggleBtn.classList.add("active");
   document.body.classList.remove("dark_theme");
