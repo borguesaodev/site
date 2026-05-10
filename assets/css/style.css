@@ -12,6 +12,7 @@
   --ff-poppins: 'Poppins', sans-serif;
   --ff-roboto: 'Roboto', sans-serif;
   --ff-corinthia: 'Corinthia', sans-serif;
+  --ff-cascadia-code: 'Cascadia Code', sans-serif;
 
   --fs-1: 2rem;
   --fs-2: calc(1.813rem + 1vw);
@@ -249,7 +250,7 @@ body.active {overflow: hidden;}
 .logo a {
   font-size: 45px;
   color: var(--color-primary);
-  font-family: var(--ff-corinthia);
+  font-family: var(--ff-cascadia-code);
 }
 
 .logo span {
